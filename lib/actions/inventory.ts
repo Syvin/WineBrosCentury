@@ -29,7 +29,7 @@ async function fetchInventoryInternal(): Promise<Inventory[]> {
   }));
 }
 
-const getCachedInventory = unstable_cache(fetchInventoryInternal, ["inventory:all"], {
+const getCachedInventory = unstable_cache(fetchInventoryInternal, ["inventory:all:v2"], {
   tags: ["inventory"],
   revalidate: 300,
 });
