@@ -72,8 +72,8 @@ export function ContactView() {
             { opacity: 0, x: 100, scale: 0.8, filter: "blur(20px)", rotationY: 15 },
             { opacity: 1, x: 0, scale: 1, filter: "blur(0px)", rotationY: 0, stagger: 0.1, ease: "power4.out", duration: 1 },
             "intro+=0.2"
-          )
-          .fromTo(footerElement, { y: 50, opacity: 0 }, { y: 0, opacity: 0.4, duration: 1 }, "intro+=0.5");
+          );
+        if (footerElement) masterTl.fromTo(footerElement, { y: 50, opacity: 0 }, { y: 0, opacity: 0.4, duration: 1 }, "intro+=0.5");
 
         // --- PHASE 2: DWELL ---
         // We keep the dwell phase short for the last section so users reach the footer naturally
